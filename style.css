@@ -1,0 +1,847 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;700;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap");
+
+:root {
+  --white: #fff;
+  --black: #000000;
+}
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  list-style: none;
+}
+html,body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 5rem;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 1.3rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.548);
+}
+section {
+  padding: 5rem 9%;
+}
+.background {
+  background: linear-gradient(rgba(134, 134, 134, 0.486), rgba(0, 0, 0, 0.459)),
+    url("images/main-background.jpg");
+    background-repeat: no-repeat;
+    background-size: cover ;
+}
+.header-1 {
+  padding: 0.8rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease-in-out;
+}
+.logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.tbtm-logo {
+  max-width: 100px;
+  min-height: 120px;
+  }
+.tbtm-name {
+  position: relative;
+  font-size: 4.7rem;
+  font-weight: 600;
+  color: #ddd;
+  letter-spacing: 1px;
+}
+.last-name{
+position: absolute;
+bottom: -45px;
+right: 0;
+background-image: linear-gradient(60deg,rgba(255, 94, 0, 0.904),rgba(248, 165, 41, 0.904) );
+-webkit-background-clip: text;
+-moz-background-clip: text;
+-webkit-text-fill-color: transparent;
+-moz-text-fill-color:transparent;
+}
+.fixed-nav-heading{
+  color: #ddd;
+  font-size: 5rem;
+  font-weight: 600;
+  display: none;
+}
+/* .search-form {
+  max-width: 50rem;
+  height: 5rem;
+  border: 1px solid rgba(0, 0, 0, 0.76);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-color: #ddd;
+}
+.search-box {
+  height: 100%;
+  width: 100%;
+  font-size: 1.6rem;
+  padding: 0 1.2rem;
+  text-transform: none;
+  color: var(--black);
+  background-color: #ddd;
+}
+.search-icon {
+  font-size: 2.5rem;
+  padding-right: 1.5rem;
+  color: var(--black);
+  cursor: pointer;
+}
+.search-icon:hover {
+  color: #ddd;
+} */
+
+.nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-section {
+  margin-right: 3rem;
+}
+.nav-section a {
+  font-size: 2.8rem;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.945);
+  transition: all 0.3s linear;
+}
+.nav-section a:hover{
+  color: rgba(255, 255, 255, 0.616);
+}
+.nav-toggle {
+  display: none;
+  font-size: 4rem;
+  color:rgba(255, 255, 255, 0.945);
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  z-index: 9999;
+}
+/* .nav-toggle:hover {
+  transform: rotate(90deg);
+} */
+
+/* fixed nav */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(rgba(134, 134, 134, 0.89), rgba(0, 0, 0, 0.932)),url("images/main-background.avif");
+  background-repeat: no-repeat;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.322);
+  height: 9.5rem;
+}
+.fixed-nav h1{
+  display: none;
+}
+.fixed-nav .fixed-nav-heading{
+  display: block;
+}
+.fixed-nav .tbtm-logo{
+  min-height: 90px;
+  max-width: 70px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.content {
+  flex: 1 1 42rem;
+}
+.collage {
+  flex: 1 1 28rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.content h3 {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 4.5rem;
+  line-height: 2;
+  padding: 1rem 0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.text {
+  color: rgba(255, 255, 255, 0.589);
+  font-size: 2rem;
+  line-height: 1.8;
+}
+.btn {
+  margin-top: 2rem;
+  color: rgba(0, 0, 0, 0.842);
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: rgb(248, 229, 203);
+  font-size: 2.5rem;
+  font-weight: 400;
+  border-radius: 13px;
+  transition: all 0.3s linear;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgba(248, 229, 203, 0.623);
+}
+/* store */
+.store-heading {
+  font-size: 3.5rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #383838;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.store-heading::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 0.2rem;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
+.store-heading span {
+  padding: 0.5rem 2rem;
+  background-color: rgb(248, 229, 203);
+  border-radius: 13px;
+}
+.product {
+  position: relative;
+  overflow: hidden;
+}
+#slider {
+  width: 100%;
+  display: flex;
+  padding: 1rem;
+  scroll-behavior: smooth;
+  overflow-x: auto;
+  transform: translateX(0);
+  cursor: grab;
+  user-select: none;
+  /* -webkit-overflow-scrolling: touch; */
+}
+.product-container::-webkit-scrollbar {
+  /* display: none; */
+}
+.prev-btn,
+.next-btn {
+  border: none;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  font-size: 3.5rem;
+  z-index: 3;
+  color: #666666;
+  transition: all 0.3s linear;
+}
+.prev-btn {
+  left: 10rem;
+}
+.next-btn {
+  right: 10rem;
+}
+.prev-btn:hover,
+.next-btn:hover {
+  color: #000000;
+}
+.box {
+  width: 14%;
+  /* height: 10%; */
+  margin-right: 3.5rem;
+  flex: 0 0 auto;
+  position: relative;
+  overflow:hidden;
+  border: 1px solid rgba(0, 0, 0, 0.637);
+  text-align: center;
+}
+.ebook-image {
+  width: 100%;
+  transition: transform 0.4s ease;
+}
+.box:hover .ebook-image{
+  transform: scale(0.95);
+}
+.newsletter {
+  background: linear-gradient(rgba(134, 134, 134, 0.486), rgba(0, 0, 0, 0.459)),
+    url("images/main-background.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem;
+}
+.form-news {
+  max-width: 55rem;
+  margin-left: auto;
+  margin-right: 18rem;
+  text-align: center;
+  padding: 2rem;
+}
+.heading-news {
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 3.5rem;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+.form-box{
+  width: 100%;
+  margin: .7rem 0;
+  padding: 1rem 1.2rem;
+  font-size: 1.6rem;
+  color: #404040;
+  border-radius: 10px;
+  text-align: left;
+}
+.box::placeholder{
+  text-align: left;
+}
+.contact-flex{
+  display: flex;
+  justify-content: space-around;
+  /* gap: 30rem; */
+  padding: 2rem;
+  margin-top: 5rem;
+}
+.contact-heading{
+  font-size: 2rem;
+  letter-spacing: 1px;
+  font-weight: 450;
+  color: #474646;
+  margin-bottom: 0.5rem;
+}
+.contact-info{
+  max-width: 400px;
+  font-size: 1.5rem;
+  color: #838282;
+}
+.contact-icons{
+  margin-top: 5rem;
+}
+.contact-icons a{
+  margin-right: 2.5rem;
+  
+}
+.contact-icon{
+  color: #e6e6e6;
+  border-radius: 50%;
+  font-size: 3rem;
+  padding: 2rem;
+  text-align: center; 
+  transition: all 0.3s linear;
+}
+.contact-icon:hover{
+  transform: scale(1.2);
+}
+.facebook-icon{
+background-color: #4267B2;
+}
+.telegram-icon{
+  background-color: #0088CC;
+}
+.youtube-icon{
+  background-color: #FF0000;
+}
+.contact-form{
+  max-width:550px; 
+}
+.contact-box{
+  border: 1px solid #838282;
+  margin-bottom: 1.5rem;
+  border-radius: 5px;
+  color: #404040;
+  border: 1px solid #ddd;
+  transition: border 0.2s linear;
+}
+.contact-box:hover{
+  border: 1px solid black; 
+}
+textarea{
+  resize: none;
+}
+.btn-message{
+  display: inline-block;
+  font-size: 1.5rem;
+  letter-spacing: 1.3px;
+  cursor: pointer;
+  padding: 1rem 1rem;
+  border-radius: 5px;
+  background-color: black;
+  color: #fff;
+  border: 1px solid black;
+  transition: all 0.3s linear;
+}
+.btn-message:hover{
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+}
+/* footer */
+.footer{
+  background: linear-gradient(rgba(134, 134, 134, 0.486), rgba(0, 0, 0, 0.459)),
+    url("images/main-background.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.other-info{
+  font-size: 3rem;
+  color: rgba(255, 255, 255, 0.884);
+  font-weight: 450;
+}
+.other-stores{
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.store-name{
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  background-color: rgb(248, 229, 203);
+  border-radius: 7px;
+  transition: all 0.3s linear;
+}
+.store-name:hover{
+  background-color: rgba(248, 229, 203, 0.623);
+}
+
+/* .popup-screen{
+  z-index: 999999;
+  position: fixed;
+  background: rgb(255, 255,255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+}
+.popup-box{
+  max-width: 500px;
+  padding: 2rem 5rem;
+  background-color: #383838;
+  margin: 20px;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:1628px) {
+  .prev-btn {
+      left: 9rem;
+    }
+  .next-btn {
+      right: 9rem;
+    }
+.form-news {
+  margin-right: 16rem;
+}
+}
+@media (max-width:1428px) {
+  .prev-btn {
+    left: 8rem;
+  }
+  .next-btn {
+    right: 8rem;
+  }
+  .form-news {
+    margin-right: 15rem;
+  }
+    .logo {
+      position: relative;
+    }
+    .tbtm-name{
+        position: absolute;
+        top: 3rem;
+        left: 8rem; 
+        }
+}
+@media (max-width:1356px) {
+  .content {
+      flex: 1 1 50rem;
+    }
+  .form-news {
+    margin-right: 14.5rem;
+  }
+.contact-flex {
+   gap: 6rem;
+}
+.box {
+  width: 15%;
+}
+}
+@media (max-width:1230px){
+ html{
+   font-size: 60%;
+ }
+
+ .contact-flex {
+   gap: 9rem;
+ }
+ .contact-form {
+   max-width: 450px;
+ }
+}
+@media (max-width:1178px) {
+
+.content {
+  flex: 1 1 45rem;
+}
+.books-slider a img {
+  width: 70%;
+}
+  .contact-flex {
+    gap: 9rem;
+  }
+  .contact-form {
+    max-width: 450px;
+  }
+}
+@media (max-width:1100px){
+  html{
+    font-size: 55%;
+  }
+     .logo {
+       position: relative;
+     }
+  .tbtm-name {
+       position: absolute;
+       top: 2rem;
+       left: 7rem;
+}
+  .last-name{
+    position: absolute;
+    bottom: -40px;
+ }
+ .tbtm-logo {
+  max-width: 80px;
+  min-height: 80px;
+  }
+  .nav-section {
+    margin-right: 2.5rem;
+}
+.content {
+  flex: 1 1 55rem;
+}
+.text {
+  font-size: 2.2rem;
+}
+.books-slider a img {
+  width: 70%;
+}
+ .prev-btn {
+   left: 7rem;
+ }
+ .next-btn {
+   right: 7rem;
+ }
+.contact-flex{
+  gap: 10rem;
+}
+.personal-contact{
+  margin: 2rem 0;
+  margin-right: 3rem;
+ min-width:325px;
+  }
+  .contact-box{
+    width: 90%;
+    margin-left: 5rem;
+}
+.btn-message{
+  margin-left: 5rem;
+}
+.form-news {
+  margin-right: 12.5rem;
+}
+}
+@media (max-width:1058px) {
+  html {
+    font-size: 55%;
+  }
+  .tbtm-logo {
+      max-width: 90px;
+      min-height: 80px;
+    }
+  .tbtm-name {
+  position: absolute;
+  top: 2.5rem;
+  left: 8.5rem;
+}
+.content {
+  margin-top: 3rem;
+  flex: 1 1 55rem;
+}
+
+.books-slider {
+  flex: 1 1 40rem;
+}
+.books-slider a img {
+  width: 50%;
+}
+.prev-btn {
+  left: 6rem;
+}
+.next-btn {
+  right: 6rem;
+}
+.contact-icon {
+  font-size: 2rem;
+}
+.contact-box {
+  width: 100%;
+  margin-left: 1rem;
+}
+.btn-message {
+  margin-left: 1rem;
+}
+}
+@media (max-width:768px) {
+.tbtm-logo {
+      max-width: 80px;
+      min-height: 70px;
+    }
+.tbtm-name{
+    font-size: 4rem;
+      position: absolute;
+      top: 2rem;
+      left: 7.5rem;
+  }
+.last-name{
+      position: absolute;
+      bottom: -37px;
+  }
+.books-slider a img {
+    width: 20%;
+  }
+.box {
+  width: 23%;
+  }
+.home{
+  padding: 5rem 9%;
+  padding-bottom: 0%;
+  }
+.prev-btn {
+  left: 3.8rem;
+  }   
+.next-btn {
+  right: 3.8rem;
+  }
+.form-news {
+  max-width: 55rem;
+  margin: auto;
+  text-align: center;
+  padding: 1rem;
+  }
+.contact-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  padding: 2rem;
+  margin-top: 5rem;
+}
+.contact-icons {
+  margin-top: 1rem;
+}
+.personal-contact {
+  margin:0;
+  min-width: 325px;
+}
+.contact-heading {
+  font-size:2.5rem;
+}
+.contact-info {
+  font-size: 1.8rem;
+}
+.footer{
+  padding: 3rem;
+}
+.fixed-nav{
+display: none;
+}
+.nav-toggle{
+  display: block;
+z-index: 9999;
+}
+.navigation{
+  background-color:rgba(128, 128, 128, 0.932);
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in;
+  overflow-x: hidden;
+  z-index: 0;
+}
+.active.navigation{
+opacity: 1;
+}
+.nav{
+  flex-direction: column;
+  gap: 4rem;
+  text-align: center;
+}
+.nav-section a {
+  font-size: 3rem;
+}
+}
+@media (max-width:425px) {
+  .header-1{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  .tbtm-logo {
+      max-width: 65px;
+      min-height: 55px;
+    }
+.tbtm-name {
+  font-size: 3.6rem;
+  position: absolute;
+  top: 2rem;
+  left: 5.5rem;
+}
+.content h3 {
+  font-size: 4rem;
+}
+.last-name {
+  position: absolute;
+  bottom: -30px;
+}
+.nav-toggle {
+  font-size: 3.5rem;
+}
+.navigation {
+  background-color: rgba(128, 128, 128, 0.932);
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in;
+  overflow-x: hidden;
+}
+.active.navigation {
+  opacity:1;
+  z-index: 99999;
+}
+.box {
+  width:45%;
+}
+.prev-btn {
+  display: none;
+  left: 1.5rem;
+}
+.next-btn {
+  display: none;
+  right: 1.5rem;
+}
+.form-news {
+  max-width: 55rem;
+  text-align: center;
+  padding: 2rem;
+}
+.heading-news {
+  min-width: 40rem;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 3rem;
+  padding-bottom: 0.7rem;
+  font-weight: normal;
+}
+.btn{
+    padding: 0.7rem 1.5rem;
+    background-color: rgb(248, 229, 203);
+    font-size: 2.5rem;
+}
+.form-box{
+  margin-left: 0%;
+}
+.btn-message{
+  margin-left: 0%;
+  font-size: 1.7rem;
+  padding: 0.8rem 1rem;
+}
+.personal-contact{
+  margin-left: 1rem;
+}
+.footer{
+  padding: 1.5rem;
+}
+.other-info {
+  font-size: 2.5rem;
+  font-weight: 500;
+}
+.store-name {
+  padding: 0.5rem 1rem;
+  font-size: 2.3rem;
+}
+}

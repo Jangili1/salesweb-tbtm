@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./node_modules/photoswipe/dist/photoswipe.css"> -->
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    />
+    <title>TBTM</title>
+  </head>
+  <body>
+  <!-- popup after window load -->
+  <!-- <div class="popup-screen">
+    <div class="popup-box">
+      <h2>Subscribe to tbtm news</h2>
+      <div class="btn">Subscribe</div>
+    </div>
+  </div> -->
+    <div class="background">
+      <header class="header">
+        <div class="header-1">
+          <div class="logo">
+            <a href="#home" class="scroll-link"
+              ><img
+                src="images/tbtm-logo.png"
+                alt="TBTM-logo"
+                class="tbtm-logo"
+              />
+            </a>
+           <a href="#home" class="scroll-link"><h1 class="tbtm-name">TruthBeTold<span class="last-name">Ministry</span></h1>
+            <h1 class="fixed-nav-heading">TBTM</h1>
+            </a>
+          </div>
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+          <!-- search-form -->
+          <!-- <form action="submit" class="search-form">
+            <input
+              type="text"
+              placeholder="search eBook here..."
+              class="search-box"
+            />
+            <label for="search-box" class="fas fa-search search-icon"></label>
+          </form> -->
+          <!-- navigation -->
+          <div class="navigation">
+            <ul class="nav">
+              <li class="nav-section"><a class="scroll-link" href="#home">HOME</a></li>
+              <li class="nav-section"><a href="https://tbtm.sale/">STORE</a></li>
+              <li class="nav-section"><a class="scroll-link" href="#contact">CONTACT</a></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <!-- header secton end -->
+      <!-- home section start -->
+      <section class="home" id="home">
+        <div class="row">
+          <div class="content">
+            <h3>Welcome</h3>
+            <p class="text">
+              TruthBeTold Ministry publishes digital Bibles in the e-pub format targeting many different languages world-wide. We currently have publications in Thai, English, Russian, Turkish, Polish, Spanish, German, Norwegian, Finnish, Chinese, Telugu, Tamil & French and more.
+            </p>
+            <a href="https://tbtm.sale/" class="btn">shop now</a>
+          </div>         
+          <div class="pswp-gallery pswp-gallery--single-column collage" id="gallery"></div>         
+          </div> 
+        </div>
+      </section>
+    </div>
+    <!-- store section start -->
+<section class="product store" id="store">
+  <h2 class="store-heading"><span>our store</span></h2>
+  <button class="prev-btn"><i class="fa-solid fa-arrow-left"></i></button>
+  <button class="next-btn"><i class="fa-solid fa-arrow-right"></i></button>
+<div class="product-container" id="slider"></div>
+</section>
+    <!-- store section end -->
+<!-- newsletter section start -->
+    <section class="newsletter">
+      <form action="submit" class="form-news">
+        <h3 class="heading-news">Subscribe for TBTM news</h3>
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="form-box"
+        />
+        <input type="submit" value="Subscribe" class="btn" />
+      </form>
+    </section>
+    <!-- newsletter section end -->
+    <section class="contact-section" id="contact">
+      <h2 class="store-heading"><span>CONTACT</span></h2>
+      <div class="contact-flex">
+        <div class="personal-contact">
+          <h3 class="contact-heading">Speaking Engagements</h3>
+          <p class="contact-info">To inquire about eBooks or any other information, Please contact:<br class="email">Email<br></p>
+        <div class="contact-icons">
+          <a href="https://www.facebook.com/truthbetoldbible/"><i class="fa-brands fa-facebook-f contact-icon facebook-icon"></i></a>
+          <a href="https://t.me/truthbetoldministry"><i class="fa-brands fa-telegram contact-icon telegram-icon"></i></i></a>
+          <a href="https://www.youtube.com/watch?v=FCMWQbvx4Vo"><i class="fa-brands fa-youtube contact-icon youtube-icon"></i></a>
+        </div>
+        </div>
+        <div class="contact-form">
+          <input
+          type="text"
+          placeholder="Your Name"
+          class="contact-box form-box"
+        />
+        <input
+        type="email"
+        placeholder="Enter Email"
+        class="contact-box form-box"
+      /> 
+      <textarea  class="contact-box form-box" id="message" rows="5" placeholder="Your Message"></textarea>
+    <button class="btn-message">Send Message</button>
+        </div>
+      </div>
+    </section>
+    <!-- footer section start -->
+    <section class="footer">
+      <h4 class="other-info">You can also buy this eBooks from:</h4>
+      <div class="other-stores">
+      <a class="store-name" href="https://www.amazon.com/Truthbetold-Ministry/e/B06XDDGS1R?ref=sr_ntt_srch_lnk_1&qid=1660807264&sr=8-1">Amazon</a>
+      <a class="store-name" href="https://books.apple.com/us/author/truthbetold-ministry/id1135177024">Apple iTunes</a>
+      </div>
+   </section>
+   <!-- footer section end -->
+    <script src="main.js" type="module"></script>
+  </body>
+</html>
